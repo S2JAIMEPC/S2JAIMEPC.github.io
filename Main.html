@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tu título aquí</title>
+    <style>
+        /* Estilos adicionales pueden ir aquí */
+        body {
+            margin: 0; /* Eliminar márgenes predeterminados */
+            overflow: hidden; /* Evitar el desplazamiento vertical */
+        }
+        #video-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1; /* Colocar detrás de los otros elementos */
+            overflow: hidden;
+        }
+        #video-background {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ajustar el tamaño del video */
+        }
+        #content {
+            position: relative; /* Permitir el posicionamiento absoluto dentro */
+            z-index: 1; /* Asegurar que esté sobre el video */
+        }
+        /* Resto de tus estilos */
+        body {
+            background-color: black; /* Fondo negro */
+            color: rgb(255, 0, 0); /* Texto rojo inicial */
+            animation: changeColor 5s infinite; /* Animación de cambio de color */
+        }
+        a {
+            color: rgb(255, 0, 0); /* Texto rojo inicial en los enlaces */
+        }
+        #header {
+            text-align: center; /* Alineación del texto en el centro */
+            margin-bottom: 40px; /* Espacio adicional debajo del título */
+        }
+        #footer {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+        }
+
+        @keyframes changeColor {
+            0% { color: rgb(255, 0, 0); } /* Inicialmente rojo */
+            50% { color: rgb(0, 255, 0); } /* Después de 2.5 segundos, verde */
+            100% { color: rgb(0, 0, 255); } /* Después de 5 segundos, azul */
+        }
+    </style>
+</head>
+<body>
+    <div id="video-container">
+        <video id="video-background" loop muted>
+            <source src="https://drive.google.com/uc?export=download&id=1ZRHeDf3rpP57RIwBK6Oe0QOLn71wuY3d" type="video/mp4">
+            <!-- Puedes agregar más fuentes de video aquí para compatibilidad -->
+        </video>
+    </div>
+    <div id="content">
+        <div id="header">
+            <pre style="text-align:center;">
+           __     ______     __     __    __     ______        __     __     ______     ______    
+          /\ \   /\  __ \   /\ \   /\ "-./  \   /\  ___\      /\ \  _ \ \   /\  ___\   /\  == \   
+         _\_\ \  \ \  __ \  \ \ \  \ \ \-./\ \  \ \  __\      \ \ \/ ".\ \  \ \  __\   \ \  __<   
+        /\_____\  \ \_\ \_\  \ \_\  \ \_\ \ \_\  \ \_____\     \ \__/".~\_\  \ \_____\  \ \_____\
+        \/_/\/_/   \/_/\/_/   \/_/   \/_/  \/_/   \/_____/      \/_/   \/_/   \/_____/   \/_____/
+                                                                                                  
+            </pre>
+            <div>
+                <a href="https://discord.gg/J6pxnd77tk" target="_blank">Tools</a>
+            </div>
+            <div>
+                <a href="https://discord.gg/2NMRgaGq77" target="_blank">Clients</a>
+            </div>
+        </div>
+        <!-- Contenido adicional de tu página puede ir aquí -->
+        <div id="footer">
+            <a href="https://discord.gg/Fw5E6e4k2D">SLD</a>
+        </div>
+    </div>
+    <script>
+        // Agregar función para iniciar la reproducción del video al hacer clic en el documento
+        document.addEventListener('click', function() {
+            var video = document.getElementById('video-background');
+            if (video.paused) {
+                video.play();
+            }
+        });
+    </script>
+</body>
+</html>
